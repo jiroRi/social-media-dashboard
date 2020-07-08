@@ -106,21 +106,27 @@ p {
     }
 
         .theme-switcher__button {
-            display: flex;
-            justify-content: flex-start;
+            position: relative;
+
+            box-sizing: border-box;
+            cursor: pointer;
+
             width: 48px;
             height: 24px;
             border-radius: 12px;
             padding: 3px;
-            box-sizing: border-box;
-            cursor: pointer;
-
             margin-left: 12px;
             
+            box-shadow: 0 4px 8px rgba(30, 32, 42, 0.125);
+
             div {
+                position: absolute;
+                top: 3px;
+                left: 3px;
                 width: 18px;
                 height: 18px;
                 border-radius: 50%;
+                transition: left 200ms, background-color 200ms;
             }
         }
 
@@ -268,6 +274,7 @@ p {
 
             margin-bottom: 24px;
             font-size: map-get($font-sizes, title-mobile);
+            font-weight: 700;
         }
 
         .socmed-overview__statistics {
@@ -277,7 +284,7 @@ p {
             justify-content: center;
 
             width: 100%;
-            margin-bottom: 2vh;
+            margin-bottom: 3vh;
 
             @media(min-width: 560px) {
                 justify-content: space-between;
@@ -327,6 +334,7 @@ p {
 
                     p {
                         font-size: map-get($font-sizes, statistics-title);
+                        font-weight: 700;
                     }
                 }
 
