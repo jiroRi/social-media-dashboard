@@ -1,0 +1,41 @@
+.increment {
+    color: hsl(163, 72%, 41%) !important;
+}
+
+.decrement {
+    color: hsl(356, 69%, 56%) !important;
+}
+
+.hr--theme {
+    background-color: hsl(228, 34%, 66%);
+}
+
+.bg--theme {
+    background-color: hsl(230, 17%, 14%);
+}
+
+.bg__dashboard--theme {
+   background-color: hsl(232, 19%, 15%);
+}
+
+.text-header--theme {
+    color: hsl(0, 0%, 100%);
+}
+
+.text-sub--theme {
+    color: hsl(228, 34%, 66%);
+}
+
+.bg__card--theme {
+   background-color: hsl(228, 28%, 20%);
+   border-radius: 4px;
+   box-shadow: -4px 8px 16px rgba(37, 42, 65, 0.15);
+}
+
+.btn-circle--theme {
+    background-color: hsl(228, 28%, 20%)
+}
+
+.btn-bg--theme {
+    background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}

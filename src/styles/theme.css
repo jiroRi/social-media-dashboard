@@ -1,0 +1,44 @@
+.increment {
+  color: #1db489 !important;
+}
+
+.decrement {
+  color: #dc414c !important;
+}
+
+.hr--theme {
+  background-color: #8b97c6;
+}
+
+.bg--theme {
+  background-color: #1e202a;
+}
+
+.bg__dashboard--theme {
+  background-color: #1f212e;
+}
+
+.text-header--theme {
+  color: white;
+}
+
+.text-sub--theme {
+  color: #8b97c6;
+}
+
+.bg__card--theme {
+  background-color: #252a41;
+  border-radius: 4px;
+  -webkit-box-shadow: -4px 8px 16px rgba(37, 42, 65, 0.15);
+          box-shadow: -4px 8px 16px rgba(37, 42, 65, 0.15);
+}
+
+.btn-circle--theme {
+  background-color: #252a41;
+}
+
+.btn-bg--theme {
+  background: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
+  background: linear-gradient(to right, #378fe6, #3eda82);
+}
+/*# sourceMappingURL=theme.css.map */

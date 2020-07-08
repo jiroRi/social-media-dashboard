@@ -1,0 +1,345 @@
+@import './shared.scss';
+@import './theme.scss';
+
+body {
+    display: flex;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    margin: 0 auto;
+}
+
+p {
+    margin: 0 !important;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.attribution a { 
+    text-decoration: none;
+    font-weight: 700;
+}
+
+ .background__dashboard {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 235px;
+     z-index: 0;
+ }
+
+ .background {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: -1;
+ }
+
+ .component {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-flow: column;
+
+    width: calc(100% - 20vw);
+    margin: 0 10vw;
+
+    @media(min-width: 1024px) {
+        width: calc(100% - 22.85%);
+        margin: 0 11.425%;
+    }
+ }
+
+    .component__header {
+        display: flex;
+        flex-flow: column;
+
+        width: 100%;
+        margin-bottom: 36px;
+        box-sizing: border-box;
+        padding-top: 40px;
+
+        @media(min-width: 1024px) {
+            flex-flow: row;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 48px;
+        }
+
+        hr {
+            width: 100%;
+            border: none;
+            height: 1px;
+            opacity: 0.25;
+            margin: 24px auto;
+
+            @media(min-width: 1024px) {
+                display: none;
+            }
+        }
+    }
+    
+    .theme-switcher {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+
+        p {
+            font-size: map-get($font-sizes, statistics-title);
+            font-weight: 700;
+        }
+
+        @media(min-width: 1024px) {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+        .theme-switcher__button {
+            display: flex;
+            justify-content: flex-start;
+            width: 48px;
+            height: 24px;
+            border-radius: 12px;
+            padding: 3px;
+            box-sizing: border-box;
+            cursor: pointer;
+
+            margin-left: 12px;
+            
+            div {
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+            }
+        }
+
+        .header-title__socmed-dashboard {
+            font-size: map-get($font-sizes, title-mobile);
+            margin-bottom: 8px;
+            font-weight: 700;
+
+            @media(min-width: 1024px) {
+                font-size: map-get($font-sizes, title-desktop);
+                margin-bottom: 4px;
+                font-weight: 700;
+            }
+        }
+
+        .header-title__followers-total {
+            font-size: map-get($font-sizes, statistics-title);
+            letter-spacing: 0.1px;
+            font-weight: 700;
+        }
+
+    .component__socmed {
+        display: flex;
+        flex-flow: column;
+
+        width: 100%;
+
+        @media(min-width: 560px) {
+            justify-content: space-between;
+            flex-flow: row wrap;
+        }
+    }
+
+        .border--facebook {
+            border-top: 4px solid hsl(208, 92%, 53%);
+        }
+
+        .border--twitter {
+            border-top: 4px solid hsl(203, 89%, 53%);
+        }
+
+        .border--instagram {
+            position: relative;
+            z-index: 0;
+            border-top: 4px solid transparent;
+        }
+
+        .border--instagram-overlay {
+            position: absolute;
+            top: -4px;
+            border-radius: 4px 4px 0 0;
+            height: 4px;
+            width: 100%;
+            background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+            z-index: -1;
+        }
+
+        .border--youtube {
+            border-top: 4px solid hsl(348, 97%, 39%);
+        }
+
+        .socmed-card__followers {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            
+            height: 212px;
+            margin-bottom: 24px;
+            padding: 24px 0;
+            box-sizing: border-box;
+
+            &:last-child {
+                margin-bottom: 48px;
+            }
+
+            @media(min-width: 560px) {
+                width: 47.5%;
+            }
+
+            @media(min-width: 1024px) {
+                padding: 28px 0;
+                width: 22.95%;
+            }
+        }
+            .socmed-card__user {
+                display: flex;
+                align-items: center;
+
+                margin-bottom: 16px;
+
+                svg {
+                    margin-right: 8px;
+                }
+
+                p {
+                    font-size: map-get($font-sizes, card-subtext);
+                    margin: 0 auto;
+                    font-weight: 700;
+                }
+
+                @media(min-width: 1024px) {
+                    margin-bottom: 24px;
+                }
+            }
+
+            .socmed-card__number {
+                letter-spacing: -2px;
+                font-size: map-get($font-sizes, card-header);
+                font-weight: 700;
+            }
+
+            .socmed-card__subtext {
+                letter-spacing: 5px;
+                font-size: map-get($font-sizes, card-subtext);
+
+                margin-bottom: 24px;
+            }
+
+            .socmed-card__update {
+                display: flex;
+                align-items: center;
+
+                svg {
+                    width: 8px;
+                    height: 4px;
+
+                    margin-right: 4px;
+
+                    path {
+                        transform: scale(1);
+                    }
+                }
+
+                p {
+                    font-size: map-get($font-sizes, card-subtext);
+                    margin: 0 auto;
+                    font-weight: 700;
+                }
+            }
+    
+        .socmed-overview__title {
+            display: flex;
+            flex-flow: column;
+
+            margin-bottom: 24px;
+            font-size: map-get($font-sizes, title-mobile);
+        }
+
+        .socmed-overview__statistics {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+            margin-bottom: 2vh;
+
+            @media(min-width: 560px) {
+                justify-content: space-between;
+                align-items: center;
+                flex-flow: row wrap;
+            }
+        }
+
+            .statistics-card {
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+
+                width: 100%;
+                height: 125px;
+                margin-bottom: 16px;
+                padding: 24px;
+                box-sizing: border-box;
+
+                &:last-child {
+                    margin-bottom: 48px;
+                }
+
+                @media(min-width: 560px) {
+                    width: 47.5%;
+                    margin-bottom: 24px;
+
+                    &:last-child {
+                        margin-bottom: 24px;
+                    }
+                }
+
+                @media(min-width: 1024px) {
+                    width: 22.95%;
+                }
+            }
+
+                .statistics-card__header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    width: 100%;
+                    height: 20px;
+                    margin-bottom: 20px;
+
+                    p {
+                        font-size: map-get($font-sizes, statistics-title);
+                    }
+                }
+
+                .statistics-card__number {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+
+                    width: 100%;
+                    height: 32px;
+
+                    b {
+                        height: 100%;
+                        font-size: map-get($font-sizes, statistics-number);
+                    }
+                }
