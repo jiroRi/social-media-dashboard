@@ -12,28 +12,32 @@
 
 .bg--theme {
     background-color: hsl(230, 17%, 14%);
+    transition: background-color 200ms;
 }
 
 .bg__dashboard--theme {
    background-color: hsl(232, 19%, 15%);
+   transition: background-color 200ms;
 }
 
 .text-header--theme {
     color: hsl(0, 0%, 100%);
+    transition: color 200ms;
 }
 
 .text-sub--theme {
     color: hsl(228, 34%, 66%);
+    transition: color 200ms;
 }
 
 .bg__card--theme {
    background-color: hsl(228, 28%, 20%);
    border-radius: 4px;
-   box-shadow: -4px 8px 16px rgba(37, 42, 65, 0.15);
+   box-shadow: -4px 12px 24px rgba(37, 42, 65, 0.15);
 }
 
 .btn-circle--theme {
-    background-color: hsl(228, 28%, 20%)
+    background-color: hsl(228, 28%, 20%);
 }
 
 .btn-bg--theme {

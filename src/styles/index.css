@@ -13,25 +13,33 @@
 
 .bg--theme {
   background-color: #1e202a;
+  -webkit-transition: background-color 200ms;
+  transition: background-color 200ms;
 }
 
 .bg__dashboard--theme {
   background-color: #1f212e;
+  -webkit-transition: background-color 200ms;
+  transition: background-color 200ms;
 }
 
 .text-header--theme {
   color: white;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
 }
 
 .text-sub--theme {
   color: #8b97c6;
+  -webkit-transition: color 200ms;
+  transition: color 200ms;
 }
 
 .bg__card--theme {
   background-color: #252a41;
   border-radius: 4px;
-  -webkit-box-shadow: -4px 8px 16px rgba(37, 42, 65, 0.15);
-          box-shadow: -4px 8px 16px rgba(37, 42, 65, 0.15);
+  -webkit-box-shadow: -4px 12px 24px rgba(37, 42, 65, 0.15);
+          box-shadow: -4px 12px 24px rgba(37, 42, 65, 0.15);
 }
 
 .btn-circle--theme {
@@ -177,26 +185,28 @@ p {
 }
 
 .theme-switcher__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
   width: 48px;
   height: 24px;
   border-radius: 12px;
   padding: 3px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  cursor: pointer;
   margin-left: 12px;
+  -webkit-box-shadow: 0 4px 8px rgba(30, 32, 42, 0.125);
+          box-shadow: 0 4px 8px rgba(30, 32, 42, 0.125);
 }
 
 .theme-switcher__button div {
+  position: absolute;
+  top: 3px;
+  left: 3px;
   width: 18px;
   height: 18px;
   border-radius: 50%;
+  -webkit-transition: left 200ms, background-color 200ms;
+  transition: left 200ms, background-color 200ms;
 }
 
 .header-title__socmed-dashboard {
@@ -383,6 +393,7 @@ p {
           flex-flow: column;
   margin-bottom: 24px;
   font-size: 24px;
+  font-weight: 700;
 }
 
 .socmed-overview__statistics {
@@ -400,7 +411,7 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  margin-bottom: 2vh;
+  margin-bottom: 3vh;
 }
 
 @media (min-width: 560px) {
@@ -477,6 +488,7 @@ p {
 
 .statistics-card__header p {
   font-size: 14px;
+  font-weight: 700;
 }
 
 .statistics-card__number {
