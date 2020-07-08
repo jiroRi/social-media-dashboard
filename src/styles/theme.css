@@ -37,8 +37,12 @@
 .bg__card--theme {
   background-color: #252a41;
   border-radius: 4px;
-  -webkit-box-shadow: -4px 12px 24px rgba(37, 42, 65, 0.15);
-          box-shadow: -4px 12px 24px rgba(37, 42, 65, 0.15);
+  -webkit-box-shadow: -2px 4px 8px rgba(37, 42, 65, 0.04);
+          box-shadow: -2px 4px 8px rgba(37, 42, 65, 0.04);
+}
+
+.bg__card--theme:hover {
+  cursor: pointer;
 }
 
 .btn-circle--theme {

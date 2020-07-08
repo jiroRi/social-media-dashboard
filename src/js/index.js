@@ -13,6 +13,10 @@ let textSubTheme = document.querySelectorAll('.text-sub--theme');
 
 /* card */
 let bgCardTheme = document.querySelectorAll('.bg__card--theme');
+let socmedCard = document.querySelectorAll('.socmed-card__followers');
+let statisticsCard = document.querySelectorAll('.statistics-card');
+let cardHighlightSocmed = document.querySelectorAll('.card__highlight--socmed');
+let cardHighlight = document.querySelectorAll('.card__highlight');
 
 /* colors */
 
@@ -21,7 +25,8 @@ let light = [
     'hsl(225, 100%, 98%)', /* Very Pale Blue (Top BG Pattern) */
     'hsl(227, 47%, 96%)', /* Light Grayish Blue (Card BG) */
     'hsl(228, 12%, 44%)', /* Dark Grayish Blue (Text) */
-    'hsl(230, 17%, 14%)' /* Very Dark Blue (Text) */
+    'hsl(230, 17%, 14%)', /* Very Dark Blue (Text) */
+    'hsl(230, 22%, 74%)' /* Toggle */
 ]
 
 let dark = [
@@ -29,7 +34,8 @@ let dark = [
     'hsl(232, 19%, 15%)', /* Very Dark Blue Dashboard*/
     'hsl(228, 28%, 20%)', /* Dark Desaturated Blue (Card BG) */
     'hsl(228, 34%, 66%)', /* Desaturated Blue (Text) */
-    'hsl(0, 0%, 100%)' /* White (Text) */
+    'hsl(0, 0%, 100%)', /* White (Text) */
+    'linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%))' /* Toggle */
 ];
 
 console.dir(btnThemeSwitcher);
@@ -39,7 +45,8 @@ let themeSwitch = false;
 btnThemeSwitcher.addEventListener('click', function() {
     if(!themeSwitch) {
         /* dashboard button */
-        btnThemeSwitcherCircle.style.backgroundColor = 'hsl(230, 22%, 74%)';
+        btnThemeSwitcher.style.background = light[5];
+        btnThemeSwitcherCircle.style.backgroundColor = light[1];
         btnThemeSwitcherCircle.style.left = 'calc(100% - 21px)';
 
         /* dashboard */
@@ -62,6 +69,7 @@ btnThemeSwitcher.addEventListener('click', function() {
     }
     else {
         /* dashboard button */
+        btnThemeSwitcher.style.background = dark[5];
         btnThemeSwitcherCircle.style.backgroundColor = 'hsl(228, 28%, 20%)';
         btnThemeSwitcherCircle.style.left = '3px';
 
@@ -80,8 +88,34 @@ btnThemeSwitcher.addEventListener('click', function() {
         for( let i = 0 ; i < bgCardTheme.length ; i++ ) {
             bgCardTheme[i].style.backgroundColor = dark[2];
         }
-
-
         themeSwitch = false;
     }
 });
+
+for ( let i = 0 ; i < socmedCard.length ; i++) {
+    socmedCard[i].addEventListener('mouseover', function() {
+        (function(i){
+            cardHighlightSocmed[i].style.opacity = '0.25';
+        })(i);
+    });
+
+    socmedCard[i].addEventListener('mouseout', function() {
+        (function(i) {
+            cardHighlightSocmed[i].style.opacity = '0';
+        })(i);
+    });
+}
+
+for ( let i = 0 ; i < statisticsCard.length ; i++) {
+    statisticsCard[i].addEventListener('mouseover', function() {
+        (function(i){
+            cardHighlight[i].style.opacity = '0.25';
+        })(i);
+    });
+
+    statisticsCard[i].addEventListener('mouseout', function() {
+        (function(i) {
+            cardHighlight[i].style.opacity = '0';
+        })(i);
+    });
+}
