@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,+EAAI",
+    "sources": [
+        "shared.scss"
+    ],
+    "names": [],
+    "file": "shared.css"
+}
